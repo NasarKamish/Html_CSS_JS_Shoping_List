@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Shop Task</title>
+  </head>
+  <body>
+    <div class="r-l-container">
+      <div class="login">
+        <form action="" method="POST" class="login-form">
+          <h3 class="login-head">Login</h3>
+
+          <hr class="login-line" />
+
+          <!-- Username -->
+          <div class="login-div">
+            <label class="login-info" for="username"> Your Username: </label>
+            <input
+              class="login-input"
+              type="text"
+              name="username"
+              required
+              placeholder="Your Username"
+            />
+          </div>
+
+          <!-- Password -->
+          <div class="login-div">
+            <label class="login-info" for="password"> Password: </label>
+            <input
+              class="login-input"
+              type="text"
+              name="password"
+              required
+              placeholder="Password"
+            />
+          </div>
+          <div class="Submit">
+            <button class="login-submit btn">Submit</button>
+          </div>
+        </form>
+        <!-- Buttons -->
+        <div class="buttons">
+          <button onclick="showRegister()" class="login-change btn">
+            Sign-in
+          </button>
+          <button onclick="themeChange()" class="login-change btn">
+            Change Theme
+          </button>
+        </div>
+      </div>
+      <div class="register">
+        <form
+          action="http://127.0.0.1:5000/user-registration/"
+          method="POST"
+          class="register-form"
+        >
+          <h3 class="register-head">Register</h3>
+          <hr class="register-line" />
+
+          <!-- first_name -->
+          <div class="register-div">
+            <label class="register-info" for="first_name"> Your Name: </label>
+            <input
+              class="register-input"
+              type="text"
+              name="first_name"
+              required
+              placeholder="Your Name"
+            />
+          </div>
+
+          <!-- last_name -->
+          <div class="register-div">
+            <label class="register-info" for="last_name"> Your Surname: </label>
+            <input
+              class="register-input"
+              type="text"
+              name="last_name"
+              required
+              placeholder="Your Surname"
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="register-div">
+            <label class="register-info" for="Email"> Your Email: </label>
+            <input
+              class="register-input"
+              type="text"
+              name="Email"
+              required
+              placeholder="Your Email"
+            />
+          </div>
+
+          <!-- username -->
+          <div class="register-div">
+            <label class="register-info" for="username">Your Username: </label>
+            <input
+              class="register-input"
+              type="text"
+              name="username"
+              required
+              placeholder="Your Username"
+            />
+          </div>
+
+          <!-- password -->
+          <div class="register-div">
+            <label class="register-info" for="password">Your Password: </label>
+            <input
+              class="register-input"
+              type="text"
+              name="password"
+              required
+              placeholder="Your Password"
+            />
+          </div>
+
+          <div class="Submit">
+            <button type="submit" class="register-submit btn">Submit</button>
+          </div>
+        </form>
+        <!-- buttons -->
+        <div class="buttons">
+          <button onclick="showRegister()" class="register-change btn">
+            Login
+          </button>
+          <button onclick="themeChange()" class="register-change btn">
+            Change Theme
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
