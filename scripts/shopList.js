@@ -4,9 +4,9 @@ let item_container = document.querySelector(".items");
 
 fetch("http://127.0.0.1:5000/get-products/").then((request) => {
   request.json().then((obj) => {
-    console.log(obj);
+    // console.log(obj);
     data = obj.data;
-    console.log(data);
+    // console.log(data);
     item_container.innerHTML = ``;
     let index = 0;
     data.forEach((product) => {
@@ -15,18 +15,20 @@ fetch("http://127.0.0.1:5000/get-products/").then((request) => {
          <p class="product-name">Name: ${product[1]}</p>
          <p class="product-price">Price: ${product[2]}</p>
          <p class="product-date">Date: ${product[3]}</p>
-         <button onclick="addToCart(${product[0]})" class="btn-Add">Add to cart</button>
+         <button onclick="addToCart(${product[0]})" class="btn-Add btn-Add-${product[0]}">Add to cart</button>
      </div>`;
-      console.log(index);
+      //   console.log(index);
       index++;
     });
   });
 });
 
-function addToCart(item) {
-  console.log(1);
-  cart.push(item);
-  console.log(cart);
+function addToCart(index) {
+  cart.push(index);
+  //   console.log(cart);
+  let add_btn = document.querySelector(`.btn-Add-${index}`);
+  console.log(add_btn);
+  add_btn.style.display = "none";
 }
 
 function showCart() {
