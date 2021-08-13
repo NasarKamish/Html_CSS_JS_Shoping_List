@@ -38,19 +38,26 @@
               placeholder="Password"
             />
           </div>
-          <div class="Submit">
-            <button class="login-submit btn">Submit</button>
+
+          <!-- Buttons -->
+          <div class="buttons">
+            <button
+              type="button"
+              onclick="showRegister()"
+              class="login-change btn"
+            >
+              Sign-in
+            </button>
+            <button type="button" class="login-submit btn">Login</button>
+            <button
+              type="button"
+              onclick="themeChange()"
+              class="login-change btn"
+            >
+              Change Theme
+            </button>
           </div>
         </form>
-        <!-- Buttons -->
-        <div class="buttons">
-          <button onclick="showRegister()" class="login-change btn">
-            Sign-in
-          </button>
-          <button onclick="themeChange()" class="login-change btn">
-            Change Theme
-          </button>
-        </div>
       </div>
       <div class="register">
         <!-- action="http://127.0.0.1:5000/user-registration/" -->
@@ -118,21 +125,32 @@
             />
           </div>
 
-          <div class="Submit">
-            <button onclick="userRegister()" class="register-submit btn">
+          <!-- buttons -->
+          <div class="buttons">
+            <button
+              type="button"
+              onclick="showRegister()"
+              class="register-change btn"
+            >
+              Login
+            </button>
+
+            <button
+              onclick="userRegister()"
+              type="button"
+              class="register-submit btn"
+            >
               Register
+            </button>
+            <button
+              type="button"
+              onclick="themeChange()"
+              class="register-change btn"
+            >
+              Change Theme
             </button>
           </div>
         </form>
-        <!-- buttons -->
-        <div class="buttons">
-          <button onclick="showRegister()" class="register-change btn">
-            Login
-          </button>
-          <button onclick="themeChange()" class="register-change btn">
-            Change Theme
-          </button>
-        </div>
       </div>
     </div>
     <script src="./scripts/index.js"></script>

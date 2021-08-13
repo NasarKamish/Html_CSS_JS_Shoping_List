@@ -58,18 +58,27 @@ function userRegister() {
   let inputs = document.querySelectorAll(".register-input");
 
   let json_info = [];
+  let val_space = true;
   inputs.forEach((input) => {
+    if (input.value == "") {
+      val_space = false;
+    }
     json_info.push(input.value);
   });
 
-  let json_dict = {
-    first_name: json_info[0],
-    last_name: json_info[1],
-    Email: json_info[2],
-    username: json_info[3],
-    password: json_info[4],
-  };
-  console.log(json_dict);
+  if (val_space) {
+    let json_dict = {
+      first_name: json_info[0],
+      last_name: json_info[1],
+      Email: json_info[2],
+      username: json_info[3],
+      password: json_info[4],
+    };
+    console.log(json_dict);
+    location.href = "www.google.com";
+  } else {
+    alert("Please enter your details!");
+  }
 }
 
 // userRegister();
