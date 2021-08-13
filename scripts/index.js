@@ -50,3 +50,26 @@ function showRegister() {
 //         console.log(data)
 //     })
 // })
+
+// user register
+
+function userRegister() {
+  // Geting the values in the inputs into a dictionary
+  let inputs = document.querySelectorAll(".register-input");
+
+  let json_info = [];
+  inputs.forEach((input) => {
+    json_info.push(input.value);
+  });
+
+  let json_dict = {
+    first_name: json_info[0],
+    last_name: json_info[1],
+    Email: json_info[2],
+    username: json_info[3],
+    password: json_info[4],
+  };
+  console.log(json_dict);
+}
+
+// userRegister();
