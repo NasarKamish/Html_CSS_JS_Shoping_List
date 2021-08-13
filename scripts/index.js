@@ -11,6 +11,7 @@ function showRegister() {
 }
 
 // Fetching users
+// can be used for log in
 
 // fetch('http://127.0.0.1:5000/get-users/')
 // .then((request) => {
@@ -75,10 +76,8 @@ function userRegister() {
       password: json_info[4],
     };
     console.log(json_dict);
-    location.href = "www.google.com";
+    location.href = "";
   } else {
     alert("Please enter your details!");
   }
 }
-
-// userRegister();
