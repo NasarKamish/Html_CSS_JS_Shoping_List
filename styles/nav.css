@@ -1,0 +1,88 @@
+:root {
+  --background-color1: white;
+  --background-color2: rgb(216, 216, 216);
+  --text-color: black;
+  --detail-color: navy;
+}
+
+body.dark-theme {
+  --background-color1: black;
+  --background-color2: rgb(53, 53, 53);
+  --text-color: white;
+  --detail-color: red;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  /* transition: all 0.3s linear; */
+}
+
+body {
+  background-color: var(--background-color1);
+  transition: all 0.3s linear;
+}
+
+/* navbar */
+
+.navbar-link {
+  list-style: none;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-anchor {
+  text-decoration: none;
+  /* list-style: none; */
+  color: var(--background-color1);
+  transition: all 0.3s linear;
+}
+
+.nav {
+  position: absolute;
+  /* z-index: 10000; */
+  top: -100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--detail-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--text-color);
+  transition: all 0.3s linear;
+}
+
+.nav.active {
+  top: 0%;
+}
+
+/* Header */
+
+.header {
+  background-color: var(--background-color1);
+  border-bottom: solid;
+  border-color: var(--detail-color);
+  height: 5vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5%;
+  z-index: 10000;
+  padding-left: 10%;
+  padding-right: 10%;
+  transition: all 0.3s linear;
+}
+
+.nav-button {
+  position: relative;
+  z-index: 20000;
+}

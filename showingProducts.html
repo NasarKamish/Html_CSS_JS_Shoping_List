@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/showingProducts.css" />
+    <title>Showing Products</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Here goes items -->
+      <div class="item">
+        <p class="product-name">Name: ${data[1]}</p>
+        <p class="product-price">Price: ${data[2]}</p>
+        <p class="product-date">Date: ${data[3]}</p>
+        <button onclick="showEdit(0)" class="btn-edit">Edit</button>
+        <button class="btn-buy">Buy</button>
+      </div>
+    </div>
+    <section class="section-edit">
+      <div class="container-edit">
+        <!-- edit container! form? -->
+        <div class="old-info">
+          <!-- old info -->
+        </div>
+        <form action="http://127.0.0.1:5000/edit-product/1/" method="put">
+          <!-- product_name -->
+          <div class="product-div">
+            <label class="product-info" for="product_name"
+              >The Product Name:
+            </label>
+            <input
+              class="product-input"
+              type="text"
+              name="product_name"
+              required
+              placeholder="The Product Name"
+            />
+          </div>
+
+          <!-- product_price -->
+          <div class="product-div">
+            <label class="product-info" for="product_price"
+              >The Product Price:
+            </label>
+            <input
+              class="product-input"
+              type="text"
+              name="product_price"
+              required
+              placeholder="The Product Price"
+            />
+          </div>
+
+          <!-- buttons -->
+          <button type="submit">SUBMIT</button>
+        </form>
+        <button onclick="showEdit(-1)" class="btn-edit">close</button>
+      </div>
+    </section>
+    <script src="./scripts/showingProducts.js"></script>
+  </body>
+</html>

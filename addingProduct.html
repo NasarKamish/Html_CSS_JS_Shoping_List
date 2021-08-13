@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add product</title>
+  </head>
+  <body>
+    <h3>Add Product</h3>
+    <form action="http://127.0.0.1:5000/create-product/" method="POST">
+      <!-- product_name -->
+      <div class="register-div">
+        <label class="register-info" for="product_name"
+          >The Product Name:
+        </label>
+        <input
+          class="register-input"
+          type="text"
+          name="product_name"
+          required
+          placeholder="The Product Name"
+        />
+      </div>
+
+      <!-- product_price -->
+      <div class="register-div">
+        <label class="register-info" for="product_price"
+          >The Product Price:
+        </label>
+        <input
+          class="register-input"
+          type="text"
+          name="product_price"
+          required
+          placeholder="The Product Price"
+        />
+      </div>
+
+      <!-- buttons -->
+      <button type="submit">SUBMIT</button>
+    </form>
+  </body>
+</html>
