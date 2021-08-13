@@ -1,0 +1,22 @@
+.cart {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: lime;
+  z-index: 100;
+  transition: all 0.3s linear;
+}
+
+.cart.active {
+  left: 0%;
+}
+
+.show-cart {
+  position: absolute;
+  z-index: 10000;
+  right: 10%;
+  padding: 15px;
+}

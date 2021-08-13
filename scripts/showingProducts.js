@@ -40,6 +40,7 @@ fetch("http://127.0.0.1:5000/get-products/").then((request) => {
     let index = 0;
     data.forEach((product) => {
       container.innerHTML += `<div class="item">
+         <img src="https://picsum.photos/200/200?random=${product[0]}" alt="${product[1]}">
          <p class="product-name">Name: ${product[1]}</p>
          <p class="product-price">Price: ${product[2]}</p>
          <p class="product-date">Date: ${product[3]}</p>
