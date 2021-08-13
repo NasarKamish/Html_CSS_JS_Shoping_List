@@ -1,140 +1,140 @@
-:root{
-    --background-color1: white;
-    --background-color2: rgb(216, 216, 216);
-    --text-color: black;
-    --detail-color: navy;
+:root {
+  --background-color1: white;
+  --background-color2: rgb(216, 216, 216);
+  --text-color: black;
+  --detail-color: navy;
 }
 
-body.dark-theme{
-    --background-color1: black;
-    --background-color2: rgb(53, 53, 53);
-    --text-color: white;
-    --detail-color: red;
+body.dark-theme {
+  --background-color1: black;
+  --background-color2: rgb(53, 53, 53);
+  --text-color: white;
+  --detail-color: red;
 }
 
-*{
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
 }
 
-body{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--detail-color);
-    transition: all 0.3s linear;
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--detail-color);
+  transition: all 0.3s linear;
 }
 
-.r-l-container{
-    width: 80vw;
-    height: 80vh;
-    background-color: var(--background-color2);
-    border-style: double;
-    border-width: 15px;
-    border-color: var(--detail-color);
-    display: flex;
-    overflow: hidden;
-    transition: all 0.3s linear;
+.r-l-container {
+  width: 80vw;
+  height: 80vh;
+  background-color: var(--background-color2);
+  border-style: double;
+  border-width: 15px;
+  border-color: var(--detail-color);
+  display: flex;
+  overflow: hidden;
+  transition: all 0.3s linear;
 }
 
-.login{
-    background-color: var(--background-color2);
-    width: 100%;
-    position: relative;
-    left: 0%;
-    color: var(--text-color);
-    padding: 5%;
-    transition: all 0.3s linear;
+.login {
+  background-color: var(--background-color2);
+  width: 100%;
+  position: relative;
+  left: 0%;
+  color: var(--text-color);
+  padding: 5%;
+  transition: all 0.3s linear;
 }
 
-.login.hide{
-    left: -200%;
-    width: 0%;
+.login.hide {
+  left: -200%;
+  width: 0%;
 }
 
-.register{
-    background-color: var(--background-color2);
-    position: relative;
-    left: -200%;
-    width: 0%;
-    color: var(--text-color);
-    padding: 5%;
-    transition: all 0.3s linear;
+.register {
+  background-color: var(--background-color2);
+  position: relative;
+  left: -200%;
+  width: 0%;
+  color: var(--text-color);
+  padding: 5%;
+  transition: all 0.3s linear;
 }
 
-.register.show{
-    left: -10%;
-    width: 100%;
+.register.show {
+  left: -10%;
+  width: 100%;
 }
 
 .login-line,
-.register-line{
-    width: 100%;
-    color: var(--detail-color);
-    margin-bottom: 1%;
-    transition: all 0.3s linear;
+.register-line {
+  width: 100%;
+  color: var(--detail-color);
+  margin-bottom: 1%;
+  transition: all 0.3s linear;
 }
 
 .register-div,
-.login-div{
-    display: flex;
-    /* justify-content: space-between; */
-    flex-direction: column;
-    margin-top: 0.5%;
-    margin-bottom: 2%;
+.login-div {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  margin-top: 0.5%;
+  margin-bottom: 2%;
 }
 
-.buttons{
-    display: flex;
-    justify-content: space-between;
+.buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
-.Submit{
-    display: flex;
-    justify-content: center;
+.Submit {
+  display: flex;
+  justify-content: center;
 }
 
-.btn{
-    width: 10vw;
-    color: var(--text-color);
-    background-color: var(--background-color1);
-    border-style: double;
-    border-color: var(--background-color2);
-    border-width: 10px;
-    padding: 15px;
-    transition: all 0.3s linear;
+.btn {
+  width: 10vw;
+  color: var(--text-color);
+  background-color: var(--background-color1);
+  border-style: double;
+  border-color: var(--background-color2);
+  border-width: 10px;
+  padding: 5px;
+  transition: all 0.3s linear;
 }
 
-.btn:hover{
-    color: var(--detail-color);
+.btn:hover {
+  color: var(--detail-color);
 }
 
 .register-input,
-.login-input{
-    padding: 0.5%;
-    background-color: var(--background-color1);
-    border-style: double;
-    border-width: 10px;
-    border-color: var(--background-color2);
-    color: var(--detail-color);
-    transition: all 0.3s linear;
+.login-input {
+  padding: 0.5%;
+  background-color: var(--background-color1);
+  border-style: double;
+  border-width: 10px;
+  border-color: var(--background-color2);
+  color: var(--detail-color);
+  transition: all 0.3s linear;
 }
 
 .register-info,
-.login-info{
-    color: var(--text-color);
-    transition: all 0.3s linear;
+.login-info {
+  color: var(--text-color);
+  transition: all 0.3s linear;
 }
 
 @media (max-width: 1000px) {
-    .r-l-container{
-        width: 100vw;
-        height: 100vh;
-    }
-    .btn{
-        width: 40vw;
-    }
+  .r-l-container {
+    width: 100vw;
+    height: 100vh;
+  }
+  .btn {
+    width: 40vw;
+  }
 }
