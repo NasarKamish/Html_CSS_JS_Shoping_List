@@ -9,7 +9,11 @@ fetch("http://127.0.0.1:5000/get-products/").then((request) => {
     // console.log(data);
     item_container.innerHTML = ``;
     let index = 0;
+    let total_cost = 0;
+    console.log(total_cost);
     data.forEach((product) => {
+      total_cost += parseFloat(product[2]);
+      console.log(total_cost);
       item_container.innerHTML += `<div class="item">
          <img src="https://picsum.photos/200/200?random=${product[0]}" alt="${product[1]}">
          <p class="product-name">Name: ${product[1]}</p>
@@ -37,12 +41,12 @@ function showCart() {
 }
 
 function populateCart() {
-  console.log("awe");
   fetch("http://127.0.0.1:5000/get-products/").then((request) => {
     request.json().then((obj) => {
       //   console.log(obj);
       data = obj.data;
       let cart_container = document.querySelector(".cart");
+      let total_cost = 0;
       //   let total = 0;
       cart_container.innerHTML = ``;
       cart.forEach((order) => {
@@ -50,6 +54,7 @@ function populateCart() {
         data.forEach((product) => {
           if (product[0] == order) {
             // console.log(product);
+            total_cost += parseFloat(product[2]);
             cart_container.innerHTML += `<div class="cart-item">
             <p class="id">${product[0]}</p>
             <p class="name">${product[1]}</p>
@@ -59,6 +64,14 @@ function populateCart() {
           }
         });
       });
+      createTotal(total_cost);
     });
   });
+}
+
+function createTotal(cost) {
+  let total_container = document.querySelector(".cart");
+  total_container.innerHTML += `<div class="total-div">
+  <p class="total-p">Total : ${cost}</p>
+  </div>`;
 }
