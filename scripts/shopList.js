@@ -9,11 +9,8 @@ fetch("http://127.0.0.1:5000/get-products/").then((request) => {
     // console.log(data);
     item_container.innerHTML = ``;
     let index = 0;
-    let total_cost = 0;
-    console.log(total_cost);
     data.forEach((product) => {
       total_cost += parseFloat(product[2]);
-      console.log(total_cost);
       item_container.innerHTML += `<div class="item">
          <img src="https://picsum.photos/200/200?random=${product[0]}" alt="${product[1]}">
          <p class="product-name">Name: ${product[1]}</p>
