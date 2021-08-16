@@ -45,7 +45,7 @@ function createCards() {
     request.json().then((obj) => {
       // console.log(obj);
       data = obj.data;
-      // console.log(data);
+      console.log(data);
       container.innerHTML = ``;
       let index = 0;
       data.forEach((product) => {
