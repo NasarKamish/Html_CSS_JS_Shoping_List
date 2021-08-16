@@ -2,7 +2,6 @@
 
 function deleteProduct(index) {
   console.log(index);
-  // http://127.0.0.1:5000/delete-product/${index}/
   let delConfirm = confirm("Are you sure you want to delete this product?");
   if (delConfirm) {
     fetch(`http://127.0.0.1:5000/delete-product/${index}/`);
@@ -10,7 +9,7 @@ function deleteProduct(index) {
   }
 }
 
-// Edit function
+// Show Edit Section function
 
 function showEdit(index) {
   // console.log(index);
@@ -32,7 +31,6 @@ function showEdit(index) {
            <p class="product-price">Price: ${product[2]}</p>
            <p class="product-date">Date: ${product[3]}</p> 
        </div>`;
-        //  button with index for delete
       });
     });
   }
