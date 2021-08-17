@@ -52,10 +52,10 @@ function populateCart() {
             // console.log(product);
             total_cost += parseFloat(product[2]);
             cart_container.innerHTML += `<div class="cart-item">
-            <p class="id">${product[0]}</p>
-            <p class="name">${product[1]}</p>
-            <p class="price">${product[2]}</p>
-            <p class="quantity">1</p>
+            <p class="id">Id: ${product[0]}</p>
+            <p class="name">Name: ${product[1]}</p>
+            <p class="price">Price: R${product[2]}</p>
+            <p class="quantity">Quantity: 1</p>
           </div>`;
           }
         });

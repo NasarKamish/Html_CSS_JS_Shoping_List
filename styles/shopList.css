@@ -1,13 +1,14 @@
 .cart {
   width: 50vw;
-  height: 100vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   position: fixed;
   overflow-y: scroll;
-  top: 0;
+  top: 5vh;
   left: -100%;
-  background-color: lime;
+  background-color: var(--background-color2);
+  color: var(--text-color);
   z-index: 100;
   transition: all 0.3s linear;
 }
@@ -20,13 +21,14 @@
   position: fixed;
   z-index: 10000;
   right: 10%;
+  top: 5vh;
   padding: 15px;
 }
 
 .cart-item {
   border-top: double;
   border-bottom: double;
-  border-color: black;
+  border-color: var(--text-color);
   border-width: 10px;
   height: 20vh;
   width: 100%;
@@ -34,8 +36,17 @@
 
 .total-div {
   width: 100%;
-  background-color: limegreen;
+  background-color: var(--background-color1);
+  color: var(--text-color);
   border-bottom: double;
   border-top: double;
-  border-color: black;
+  /* border-color: black; */
+}
+
+.items {
+  color: var(--text-color);
+  padding-top: 6vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

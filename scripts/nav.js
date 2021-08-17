@@ -4,19 +4,16 @@ let nav = document.querySelector(".nav");
 
 nav.innerHTML = `<ul class="navbar-links">
 <li class="navbar-link">
-  <a onclick="navToggle()" href="#" class="navbar-anchor">Shop</a>
+  <a onclick="navToggle()" href="../shopList.html" class="navbar-anchor">Shop</a>
 </li>
 <li class="navbar-link">
-  <a onclick="navToggle()" href="#" class="navbar-anchor">History</a>
+  <a onclick="navToggle()" href="../showingProducts.html" class="navbar-anchor">Product List</a>
 </li>
 <li class="navbar-link">
-  <a onclick="navToggle()" href="#" class="navbar-anchor">Cart</a>
+  <a onclick="navToggle()" href="../addingProduct.html" class="navbar-anchor">Add Product</a>
 </li>
 <li class="navbar-link">
-  <a onclick="navToggle()" href="#" class="navbar-anchor">Products</a>
-</li>
-<li class="navbar-link">
-  <a onclick="navToggle()" href="#" class="navbar-anchor">Logout</a>
+  <a onclick="navToggle()" href="../index.html" class="navbar-anchor">Logout</a>
 </li>
 </ul>`;
 
@@ -28,9 +25,9 @@ function navToggle() {
 
 let header = document.querySelector(".header");
 
-header.innerHTML = `<button onclick="navToggle()" class="nav-button">---</button>
+header.innerHTML = `<button onclick="navToggle()" class="nav-button">NavBar</button>
 <p class="logo"></p>
-<button onclick="themeChange()" class="switch">+++</button>`;
+<button onclick="themeChange()" class="switch">Theme</button>`;
 
 // Theme changer
 

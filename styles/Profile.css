@@ -1,13 +1,7 @@
-* {
-  padding: 0%;
-  margin: 0%;
-  box-sizing: border-box;
-}
-
 .account-container {
   width: 100vw;
   height: 100vh;
-  background-color: lime;
+  background-color: var(--background-color1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,5 +10,5 @@
 .acc-edit {
   width: 60vw;
   height: 60vh;
-  background-color: limegreen;
+  background-color: var(--background-color2);
 }
