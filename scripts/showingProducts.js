@@ -37,7 +37,7 @@ function populateEdit(index) {
     </div>
 
     <!-- buttons -->
-    <button onclick="editProduct(${index})" type="button">awe</button>
+    <button onclick="editProduct(${index})" type="button">Submit</button>
   </form>
   <button onclick="showEdit(-1)" class="btn-edit">close</button>`;
 }
@@ -62,17 +62,17 @@ function editProduct(id) {
     };
     console.log(json_dict);
     // location.href = "";
-    fetch(`http://127.0.0.1:5000/edit-product/${id}/`, {
-      method: "PUT",
-      body: JSON.stringify(json_dict),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
+    // fetch(`http://127.0.0.1:5000/edit-product/${id}/`, {
+    //   method: "PUT",
+    //   body: JSON.stringify(json_dict),
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     console.log("Success:", data);
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error:", error);
+    //   });
   } else {
     alert("Please enter your details!");
   }

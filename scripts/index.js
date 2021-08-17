@@ -11,6 +11,15 @@ function showRegister() {
 }
 
 // Fetching users
+
+fetch("http://127.0.0.1:5000/get-users/").then((request) => {
+  request.json().then((obj) => {
+    data = obj.data;
+    console.log(data);
+  });
+});
+
+// Fetching users
 // can be used for log in
 
 // fetch('http://127.0.0.1:5000/get-users/')
@@ -68,6 +77,13 @@ function userRegister() {
   });
 
   if (val_space) {
+    let formData = new FormData();
+    formData.append("first_name", json_info[0]);
+    formData.append("last_name", json_info[1]);
+    formData.append("Email", json_info[2]);
+    formData.append("username", json_info[3]);
+    formData.append("password", json_info[4]);
+
     let json_dict = {
       first_name: json_info[0],
       last_name: json_info[1],
@@ -75,8 +91,16 @@ function userRegister() {
       username: json_info[3],
       password: json_info[4],
     };
+    console.log(formData);
     console.log(json_dict);
     location.href = "";
+    fetch("http://127.0.0.1:5000/user-registration/", {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(json_dict),
+    });
   } else {
     alert("Please enter your details!");
   }
