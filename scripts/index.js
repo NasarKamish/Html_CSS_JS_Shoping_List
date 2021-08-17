@@ -18,8 +18,8 @@ function logIn() {
       request.json().then((obj) => {
         data = obj.data;
         data.forEach((person) => {
-          console.log(person);
-          if (person[1] == inputs[0].value && person[2] == inputs[1].value) {
+          // console.log(person);
+          if (person[1] == inputs[4].value && person[2] == inputs[5].value) {
             console.log("hi");
             window.location.replace("shopList.html");
           }
