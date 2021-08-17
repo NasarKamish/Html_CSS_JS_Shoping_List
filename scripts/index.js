@@ -19,8 +19,8 @@ function logIn() {
         data = obj.data;
         data.forEach((person) => {
           // console.log(person);
-          if (person[1] == inputs[4].value && person[2] == inputs[5].value) {
-            console.log("hi");
+          if (person[4] == inputs[0].value && person[5] == inputs[1].value) {
+            // console.log("hi");
             window.location.replace("shopList.html");
           }
         });
