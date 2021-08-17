@@ -12,11 +12,17 @@ function showRegister() {
 
 // Fetching users
 function logIn() {
-  console.log("awe");
+  let inputs = document.querySelectorAll(".login-input");
   fetch("http://127.0.0.1:5000/get-users/").then((request) => {
     request.json().then((obj) => {
       data = obj.data;
-      console.log(data);
+      data.forEach((person) => {
+        console.log(person);
+        if (person[1] == inputs[0].value && person[2] == inputs[1].value) {
+          console.log("hi");
+          window.location.replace("shopList.html");
+        }
+      });
     });
   });
 }
