@@ -2,26 +2,28 @@ let cart = [];
 
 let item_container = document.querySelector(".items");
 
-fetch("http://127.0.0.1:5000/get-products/").then((request) => {
-  request.json().then((obj) => {
-    // console.log(obj);
-    data = obj.data;
-    // console.log(data);
-    item_container.innerHTML = ``;
-    let index = 0;
-    data.forEach((product) => {
-      item_container.innerHTML += `<div class="item">
+fetch("https://fathomless-wildwood-85481.herokuapp.com/get-products/").then(
+  (request) => {
+    request.json().then((obj) => {
+      // console.log(obj);
+      data = obj.data;
+      // console.log(data);
+      item_container.innerHTML = ``;
+      let index = 0;
+      data.forEach((product) => {
+        item_container.innerHTML += `<div class="item">
          <img src="https://picsum.photos/200/200?random=${product[0]}" alt="${product[1]}">
          <p class="product-name">Name: ${product[1]}</p>
          <p class="product-price">Price: ${product[2]}</p>
          <p class="product-date">Date: ${product[3]}</p>
          <button onclick="addToCart(${product[0]})" class="btn-Add btn-Add-${product[0]}">Add to cart</button>
      </div>`;
-      //   console.log(index);
-      index++;
+        //   console.log(index);
+        index++;
+      });
     });
-  });
-});
+  }
+);
 
 function addToCart(index) {
   cart.push(index);
@@ -37,32 +39,34 @@ function showCart() {
 }
 
 function populateCart() {
-  fetch("http://127.0.0.1:5000/get-products/").then((request) => {
-    request.json().then((obj) => {
-      //   console.log(obj);
-      data = obj.data;
-      let cart_container = document.querySelector(".cart");
-      let total_cost = 0;
-      //   let total = 0;
-      cart_container.innerHTML = ``;
-      cart.forEach((order) => {
-        // console.log(order);
-        data.forEach((product) => {
-          if (product[0] == order) {
-            // console.log(product);
-            total_cost += parseFloat(product[2]);
-            cart_container.innerHTML += `<div class="cart-item">
+  fetch("https://fathomless-wildwood-85481.herokuapp.com/get-products/").then(
+    (request) => {
+      request.json().then((obj) => {
+        //   console.log(obj);
+        data = obj.data;
+        let cart_container = document.querySelector(".cart");
+        let total_cost = 0;
+        //   let total = 0;
+        cart_container.innerHTML = ``;
+        cart.forEach((order) => {
+          // console.log(order);
+          data.forEach((product) => {
+            if (product[0] == order) {
+              // console.log(product);
+              total_cost += parseFloat(product[2]);
+              cart_container.innerHTML += `<div class="cart-item">
             <p class="id">Id: ${product[0]}</p>
             <p class="name">Name: ${product[1]}</p>
             <p class="price">Price: R${product[2]}</p>
             <p class="quantity">Quantity: 1</p>
           </div>`;
-          }
+            }
+          });
         });
+        createTotal(total_cost);
       });
-      createTotal(total_cost);
-    });
-  });
+    }
+  );
 }
 
 function createTotal(cost) {

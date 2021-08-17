@@ -13,18 +13,20 @@ function showRegister() {
 // Fetching users
 function logIn() {
   let inputs = document.querySelectorAll(".login-input");
-  fetch("http://127.0.0.1:5000/get-users/").then((request) => {
-    request.json().then((obj) => {
-      data = obj.data;
-      data.forEach((person) => {
-        console.log(person);
-        if (person[1] == inputs[0].value && person[2] == inputs[1].value) {
-          console.log("hi");
-          window.location.replace("shopList.html");
-        }
+  fetch("https://fathomless-wildwood-85481.herokuapp.com/get-users/").then(
+    (request) => {
+      request.json().then((obj) => {
+        data = obj.data;
+        data.forEach((person) => {
+          console.log(person);
+          if (person[1] == inputs[0].value && person[2] == inputs[1].value) {
+            console.log("hi");
+            window.location.replace("shopList.html");
+          }
+        });
       });
-    });
-  });
+    }
+  );
 }
 
 // Fetching users
